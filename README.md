@@ -3,7 +3,7 @@
 
 ## Descripción
 
-1. Proporciona un formulario en el que el usuario pueda ingresar el nombre, referencia y/o SKU de un producto en una tienda online.
+1. Aplicación, en la cuál puede buscarse un
 
 
 ## Requisitos
