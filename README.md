@@ -9,6 +9,7 @@
 ## Requisitos
 
 - PHP >= 8.2.4
+- Laravel 11
 - Composer
 - Google Custom Search API Key
 - Google Custom Search Engine ID (CX)
