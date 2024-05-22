@@ -18,6 +18,7 @@ class SearchCommand extends Command
          $apiKey = config('services.google.api_key'); // Obtiene la API Key de la configuración
          $cx = config('services.google.cx'); // Obtiene el CX de la configuración o el ID del custom search engine
  
+         // Crea una nueva instancia del cliente HTTP
          $client = new Client();
          // Construye la URL de la API de Google Custom Search
          $url = "https://www.googleapis.com/customsearch/v1?q=" . urlencode($query) . "&key={$apiKey}&cx={$cx}";
@@ -25,8 +26,10 @@ class SearchCommand extends Command
          try {
              // Realiza la solicitud GET a la API de Google
              $response = $client->get($url);
+             // Decodifica la respuesta JSON
              $results = json_decode($response->getBody()->getContents(), true);
  
+             // Variables para almacenar los resultados deseados
              $offersUrl = '';
              $productId = '';
              $productLink = '';

@@ -3,7 +3,7 @@
 
 ## Descripción
 
-1. Aplicación, en la cuál puede buscarse un
+1. Aplicación web desarrollada en Laravel, en la cuál puede buscarse un producto utilizando Google custom search API, y te muestra su id y el Link de su compra en https://www.lacasadelelectrodomestico.com.
 
 
 ## Requisitos
@@ -17,6 +17,8 @@
 ## Configuración
 ## Crear un Custom Search Engine en Google ahí obtendra credenciales que usará mas adelante
 1. https://programmablesearchengine.google.com/
+2. Presionara el boton "GET STARTED. 
+3. Tendrá que iniciar sesion para poder crear un Custom search Api y generar la key
 
 ### Clonar el Repositorio
 
@@ -41,6 +43,12 @@ Clona este repositorio en tu máquina local:
 
 ## Genera la clave de la aplicacion
 php artisan key:generate
+
+## Crear la base de datos, daría error si no se crea antes.
+## Le preguntara por la base de datos o bd, debe seleccionar 'Si' cuando
+php artisan migrate
+
+
 
 ## Inicia el Servidor de desarrollo
 php artisan serve

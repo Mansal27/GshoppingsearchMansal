@@ -6,16 +6,28 @@ use Illuminate\Http\Request;
 
 
 
+/**
+ * Controlador de búsqueda
+ */
 class SearchController extends Controller
 {
-   // Método para mostrar el formulario de búsqueda
+   /**
+    * Muestra el formulario de búsqueda
+    *
+    * @return \Illuminate\View\View La vista del formulario de búsqueda
+    */
    public function showSearchForm()
    {
        // Renderiza la vista 'searching'
        return view('searching');
    }
 
-   // Método para manejar la solicitud de búsqueda
+   /**
+    * Maneja la solicitud de búsqueda
+    *
+    * @param \Illuminate\Http\Request $request La solicitud HTTP
+    * @return \Illuminate\Http\RedirectResponse|\Illuminate\View\View Redirige al formulario con un error o muestra los resultados
+    */
    public function search(Request $request)
    {
        // Obtiene la consulta de búsqueda del formulario
